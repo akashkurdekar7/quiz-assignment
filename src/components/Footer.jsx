@@ -6,12 +6,13 @@ const FooterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #282c34;
-  color: white;
-  font-size: 1rem;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text};
+  font-size: ${({ theme }) => theme.fontSizes.base};
   text-align: center;
   flex-direction: column;
   position: relative;
+  box-shadow: ${({ theme }) => theme.shadows.primary};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -23,18 +24,19 @@ const DownloadApp = styled.div`
   align-items: center;
   gap: 1.5rem;
   justify-content: center;
-  align-items: center;
 
   .button {
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: ${({ theme }) => theme.colors.accent};
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: ${({ theme }) => theme.shadows.accent};
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
-      background-color: #45a049;
+      background-color: ${({ theme }) => theme.colors.secondary};
     }
   }
 `;
@@ -44,14 +46,13 @@ const CreatedBy = styled.div`
 
   .name {
     font-weight: bold;
-    color: #4caf50;
+    color: ${({ theme }) => theme.colors.accent};
     text-decoration: none;
-    text-align: center;
     transition: all 0.3s linear;
     cursor: pointer;
 
     &:hover {
-      color: #ddd;
+      color: ${({ theme }) => theme.colors.secondary};
     }
   }
 `;
@@ -59,7 +60,7 @@ const CreatedBy = styled.div`
 const Divider = styled.div`
   width: 100%;
   height: 1px;
-  background-color: #ddd;
+  background-color: ${({ theme }) => theme.colors.text};
   margin: 1rem 0;
 `;
 

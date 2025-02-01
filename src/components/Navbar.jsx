@@ -18,33 +18,33 @@ const Navbar = () => {
   return (
     <Wrapper>
       <Logo>
-        <h1>Logo</h1>
+        <h1>Quiz App</h1>
       </Logo>
 
       <HamburgerIcon onClick={toggleMenu}>
         {menuOpen ? (
-          <IoMdClose size={30} color="black" />
+          <IoMdClose size={30} color="white" />
         ) : (
-          <GiHamburgerMenu size={30} color="black" />
+          <GiHamburgerMenu size={30} color="white" />
         )}
       </HamburgerIcon>
 
       <Menu open={menuOpen}>
         <ul>
           <li>
-            <Link to="/" onClick={closeMenu}>
+            <StyledLink to="/" onClick={closeMenu}>
               Home
-            </Link>
+            </StyledLink>
           </li>
           <li>
-            <Link to="/about" onClick={closeMenu}>
+            <StyledLink to="/about" onClick={closeMenu}>
               About
-            </Link>
+            </StyledLink>
           </li>
           <li>
-            <Link to="/quiz" onClick={closeMenu}>
+            <StyledLink to="/quiz" onClick={closeMenu}>
               Quiz
-            </Link>
+            </StyledLink>
           </li>
         </ul>
         <DownloadButton onClick={closeMenu}>Download App</DownloadButton>
@@ -59,9 +59,11 @@ const Wrapper = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text};
   align-items: center;
   position: relative;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.accent};
 
   @media (max-width: 768px) {
     flex-direction: row;
@@ -74,6 +76,7 @@ const Logo = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
+    color: ${({ theme }) => theme.colors.accent};
   }
 
   @media (max-width: 768px) {
@@ -109,7 +112,7 @@ const Menu = styled.nav`
     font-size: 1rem;
     font-weight: medium;
     &:hover {
-      color: #4caf50;
+      color: ${({ theme }) => theme.colors.accent};
     }
   }
 
@@ -118,26 +121,39 @@ const Menu = styled.nav`
     gap: 1rem;
     width: 100%;
     display: ${({ open }) => (open ? "flex" : "none")};
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.background};
     position: absolute;
     top: 70px;
     left: 0;
     padding: 1rem;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid ${({ theme }) => theme.colors.accent};
     z-index: 50;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.text};
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.accent};
   }
 `;
 
 const DownloadButton = styled.button`
   padding: 0.5rem 1rem;
-  background-color: #4caf50;
+  background-color: ${({ theme }) => theme.colors.accent};
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: ${({ theme }) => theme.shadows.accent};
 
   &:hover {
-    background-color: #45a049;
+    background-color: ${({ theme }) => theme.colors.secondary};
   }
 
   @media (max-width: 768px) {

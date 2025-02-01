@@ -234,7 +234,7 @@ const Wrapper = styled.div`
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    min-width: 400px; /* Adjusted for smaller screens */
+    min-width: 400px;
     min-height: 200px;
     position: relative;
   }
@@ -328,29 +328,28 @@ const Wrapper = styled.div`
     background-color: #218838;
   }
 
-  /* Media Queries for Responsiveness */
   @media (max-width: 768px) {
     .card {
-      min-width: 300px; /* Adjust for tablets */
+      min-width: 300px;
     }
     .title {
-      font-size: 1.5rem; /* Smaller title for mobile */
+      font-size: 1.5rem;
     }
     .question-description {
-      font-size: 1.2rem; /* Smaller question text for mobile */
+      font-size: 1.2rem;
     }
   }
 
   @media (max-width: 480px) {
     .card {
-      min-width: 100%; /* Full width for mobile */
-      padding: 10px; /* Less padding for mobile */
+      min-width: 100%;
+      padding: 10px;
     }
     .title {
-      font-size: 1.3rem; /* Even smaller title for mobile */
+      font-size: 1.3rem;
     }
     .question-description {
-      font-size: 1rem; /* Smaller question text for mobile */
+      font-size: 1rem;
     }
   }
 `;

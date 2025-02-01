@@ -9,8 +9,13 @@ const Header = () => {
     </Wrapper>
   );
 };
+
 const Wrapper = styled.header`
   height: auto;
   width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text};
+  box-shadow: ${({ theme }) => theme.shadows.primary};
 `;
+
 export default Header;

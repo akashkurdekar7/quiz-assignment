@@ -5,16 +5,24 @@ import Quiz from "./components/Quiz";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
+import About from "./components/About";
 
 const App = () => {
   const theme = {
     colors: {
-      primary: "#282c34",
-      secondary: "#4caf50",
+      primary: "#3f51b5",
+      secondary: "#f44336",
+      background: "#f0f0f0",
+      text: "#212121",
+      accent: "#ff9800",
     },
     fontSizes: {
       base: "16px",
-      large: "18px",
+      large: "20px",
+    },
+    shadows: {
+      primary: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+      accent: "0px 4px 8px rgba(255, 152, 0, 0.4)",
     },
   };
 
@@ -24,6 +32,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>
         <Footer />
