@@ -22,7 +22,7 @@ const Quiz = () => {
   };
 
   return (
-    <Wrapper >
+    <Wrapper lazyLoading={true}>
       <Overlay />
       <QuizContainer>
         {!quizStarted ? (

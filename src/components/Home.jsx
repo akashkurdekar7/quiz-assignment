@@ -11,7 +11,7 @@ const Home = () => {
   };
 
   return (
-    <Container>
+    <Container lazyLoading={true}>
       <Overlay />
       <Content>
         <h1 className="title">Welcome to the Quiz App</h1>
