@@ -11,9 +11,12 @@ Welcome to the Quiz App! This fun and interactive quiz application allows you to
 
 ## App Screenshot
 
-![About Screenshot]
-(public/screenshots/Home.png)
-(public/screenshots/About.png)
+![Home Screenshot](public/screenshots/Home.png)
+![About Screenshot](public/screenshots/About.png)
+![Quiz Start Screenshot](public/screenshots/quizStart.png)
+![Question Screenshot](public/screenshots/Questions.png)
+![Correct/Incorrect Screenshot](public/screenshots/correctWrong.png)
+![Results Screenshot](public/screenshots/Results.png)
 
 ## How to Set Up Locally
 
