@@ -7,7 +7,7 @@ import Confetti from "react-confetti";
 const Question = () => {
   // const apiUrl = "/api/Uw5CrX";
   // const apiUrl = import.meta.env.VITE_API_URL;
-  const apiUrl = import.meta.env.VERCEL_API_URL;
+  const apiUrl = import.meta.env.VITE_VERCEL_API_URL;
 
   const [questions, setQuestions] = useState([]);
   const [title, setTitle] = useState("");
