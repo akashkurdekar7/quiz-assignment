@@ -5,9 +5,7 @@ import styled from "styled-components";
 import Confetti from "react-confetti";
 
 const Question = () => {
-  // const apiUrl = "/api/Uw5CrX";
-  // const apiUrl = import.meta.env.VITE_API_URL;
-  const apiUrl = import.meta.env.VITE_VERCEL_API_URL;
+  const apiUrl = "/api/Uw5CrX";
 
   const [questions, setQuestions] = useState([]);
   const [title, setTitle] = useState("");
@@ -28,7 +26,7 @@ const Question = () => {
       setError("");
 
       try {
-        const response = await axios.get(`${apiUrl}/Uw5CrX`);
+        const response = await axios.get(apiUrl);
         const { title, questions: questionsArray } = response.data;
 
         if (Array.isArray(questionsArray)) {
@@ -228,6 +226,7 @@ const Wrapper = styled.div`
     bottom: 16%;
     left: 50%;
     transform: translate(-50%);
+    color: ${({ theme }) => theme.colors.accent};
   }
 
   .card {
@@ -307,7 +306,6 @@ const Wrapper = styled.div`
     text-align: justify;
     color: black;
     font-size: 16px;
-    font-family: "Inter", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 10px;
