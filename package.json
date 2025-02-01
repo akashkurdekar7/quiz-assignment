@@ -1,8 +1,9 @@
 {
-  "name": "testline",
+  "name": "quiz",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "https://quiz-assignment-delta.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
