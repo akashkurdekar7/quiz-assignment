@@ -5,7 +5,8 @@ import styled from "styled-components";
 import Confetti from "react-confetti";
 
 const Question = () => {
-  const apiUrl = "/api/Uw5CrX";
+  // const apiUrl = "/api/Uw5CrX";
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const [questions, setQuestions] = useState([]);
   const [title, setTitle] = useState("");
@@ -26,7 +27,7 @@ const Question = () => {
       setError("");
 
       try {
-        const response = await axios.get(apiUrl);
+        const response = await axios.get(`${apiUrl}/Uw5CrX`);
         const { title, questions: questionsArray } = response.data;
 
         if (Array.isArray(questionsArray)) {

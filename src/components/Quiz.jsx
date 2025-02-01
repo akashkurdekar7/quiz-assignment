@@ -22,7 +22,7 @@ const Quiz = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper >
       <Overlay />
       <QuizContainer>
         {!quizStarted ? (
