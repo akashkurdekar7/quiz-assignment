@@ -46,6 +46,7 @@ const Wrapper = styled.div`
   background-image: url(${quizImage});
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 `;
 
 const Overlay = styled.div`

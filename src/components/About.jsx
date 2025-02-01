@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import about from "../assets/about.jpg";
 
 const About = () => {
   return (
@@ -38,10 +39,11 @@ const AboutWrapper = styled.div`
   min-height: 100vh;
   background-color: #f8f9fa;
   padding: 20px;
+  background-color: white;
 `;
 
 const AboutContent = styled.div`
-  background-color: white;
+  background-color: #e4e4e7;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;

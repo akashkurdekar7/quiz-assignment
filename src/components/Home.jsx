@@ -33,6 +33,7 @@ const Container = styled.div`
   background-image: url(${home});
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 `;
 
 const Overlay = styled.div`
