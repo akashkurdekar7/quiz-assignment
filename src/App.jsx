@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
 import About from "./components/About";
 
+
 const App = () => {
   const theme = {
     colors: {

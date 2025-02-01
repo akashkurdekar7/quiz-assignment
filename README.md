@@ -9,6 +9,10 @@ Welcome to the Quiz App! This fun and interactive quiz application allows you to
 - **Confetti Celebration**: Celebrate your victory with a confetti explosion when you finish the quiz!
 - **Track Your Scores**: Your score is displayed at the end of the quiz, so you can see how you did.
 
+## App Screenshot
+
+![About Screenshot](public/screenshots/About.png)
+
 ## How to Set Up Locally
 
 To run the project on your machine, follow these steps:
