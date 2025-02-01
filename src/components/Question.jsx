@@ -5,7 +5,8 @@ import styled from "styled-components";
 import Confetti from "react-confetti";
 
 const Question = () => {
-  const apiUrl = "/api/Uw5CrX";
+  // const apiUrl = "/api/Uw5CrX";
+  const apiUrl = "https://api.jsonserve.com/Uw5CrX/";
 
   const [questions, setQuestions] = useState([]);
   const [title, setTitle] = useState("");
